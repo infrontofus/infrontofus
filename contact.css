@@ -1,0 +1,344 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    padding: 0 20px;
+}
+
+/* Logo */
+.nav_img {
+    height: 100px;
+    padding: 5px;
+}
+
+/* Navigation Links */
+.quicklinks {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.quicklinks li {
+    margin-right: 20px;
+}
+
+.quicklinks li a {
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+    font-family: "Moon Dance", serif;
+}
+
+.quicklinks li a:hover {
+    background: linear-gradient(to right, #185a9d, #43cea2);
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    color: white;
+}
+
+/* Contact Us Content */
+.contact_content {
+    padding: 100px 20px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact_heading {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
+    font-family: "Creepster", serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact_para {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: "Moon Dance", serif;
+}
+
+.contact_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact_form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form_group {
+    margin-bottom: 20px;
+}
+
+.form_group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-family: "Moon Dance", serif;
+}
+
+.form_group input,
+.form_group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #43cea2;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-family: "Moon Dance", serif;
+}
+
+.form_group textarea {
+    resize: vertical;
+}
+
+.submit_btn {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Moon Dance", serif;
+}
+
+.submit_btn:hover {
+    background: linear-gradient(to right, #185a9d, #43cea2);
+}
+
+.contact_details {
+    flex: 1;
+    min-width: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.details_heading {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    font-family: "Moon Dance", serif;
+    margin-bottom: 20px;
+}
+
+.details_list {
+    list-style: none;
+    padding: 0;
+}
+
+.details_list li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-family: "Moon Dance", serif;
+}
+
+.details_list i {
+    margin-right: 10px;
+    color: #43cea2;
+}
+
+.social_icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social_icons a {
+    color: #43cea2;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social_icons a:hover {
+    color: #185a9d;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+    background: linear-gradient(to top, #43cea2, #185a9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Moon Dance", serif;
+}
+
+.footer-links,
+.social-links,
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li,
+.social-links li,
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+.footer-links a,
+.social-links a,
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.social-links a:hover {
+    background: linear-gradient(to right, #185a9d, #43cea2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social-links i,
+.contact-info i {
+    margin-right: 10px;
+    color: #43cea2;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 14px;
+}
+/* Social Media Links */
+.social-links img {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+
+.social-links a:hover {
+    color: #43cea2; /* Change hover color as needed */
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar {
+        height: 80px;
+        padding: 10px;
+    }
+    .nav_img {
+        height: 80px;
+    }
+    .quicklinks {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: fit-content;
+        padding: 60px 20px;
+        row-gap: 50px;
+    }
+
+    .quicklinks.show {
+        display: flex;
+    }
+
+    .quicklinks li {
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    .contact_content {
+        padding-top: 80px;
+    }
+
+    .contact_heading {
+        font-size: 40px;
+    }
+
+    .contact_para {
+        font-size: 18px;
+    }
+
+    .contact_container {
+        flex-direction: column;
+    }
+
+    .contact_form,
+    .contact_details {
+        width: 100%;
+    }
+}
