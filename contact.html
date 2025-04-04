@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -36,28 +37,14 @@
      <!-- Contact Us Content -->
     <div class="contact-content">
         <h1 class="contact-heading">Contact Us</h1>
-        <p class="contact-subheading">We'd love to hear from you! Reach out to us for any inquiries or feedback.</p>
+        <p class="contact-subheading">We'd love to hear from you! Reach out to us on WhatsApp for any inquiries or feedback.</p>
 
-        <!-- Contact Form -->
-        <center>
-            <div class="contact-form">
-                <form id="contactForm" action="http://localhost:5000/api/contact" method="post">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit_btn">Send Message</button>
-                </form>
-            </div>
-        </center>
+        <!-- WhatsApp Button -->
+        <div class="whatsapp-container">
+            <a href="https://wa.me/917708658035" class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
 
         <!-- Contact Information -->
         <center>
@@ -73,14 +60,16 @@
 
         <!-- Map (Optional) -->
         <div class="contact-map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.869943038204!2d77.2069073150816!3d28.57208298244033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2a7a5d7a0a9%3A0x9a9a9a9a9a9a9a9a!2sYour%20Location!5e0!3m2!1sen!2sin!4v1631234567890!5m2!1sen!2sin"
-                width="100%"
-                height="300"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.347780221188!2d80.043832!3d12.828176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDQ5JzQxLjQiTiA4MMKwMDInMzcuOCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                    width="100%"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
         </div>
     </div>
    </center>
@@ -168,29 +157,6 @@
             // Toggle hamburger/cross icon
             hamburger.classList.toggle("active");
         }
-    
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-    
-            const formData = new FormData(this);
-    
-            fetch('http://localhost:5000/api/contact', {
-            method: 'POST',
-            body: JSON.stringify(Object.fromEntries(formData)),
-            headers: {
-                 'Content-Type': 'application/json'
-            }
-            })
-            .then(response => response.json())
-            .then(data => {
-            console.log(data); // Check the response in the console
-            alert(data.message);
-            this.reset();
-            })
-            .catch(error => {
-                console.error('Error:', error); // Check for any errors in the console
-            });
-        });
     </script>
 </body>
 </html>
