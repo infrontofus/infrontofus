@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="loader.png">
+    <link rel="stylesheet" href="blog.css">
+    <title>Blog - Infrontofus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img class="nav_img" src="mainlogo2.png" alt="logo">
+        <h1 class="nav_heading"><span class="a">I</span>nfront <span class="a">O</span>f <span class="a">U</span>s</h1>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span class="hamburger-icon">&#9776;</span>
+            <span class="close-icon">&#10005;</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="quicklinks" id="nav-links">
+            <li><a class="qlinks" href="index.html">Home</a></li>
+            <li><a class="qlinks" href="about.html">About</a></li>
+            <li><a class="qlinks" href="blog.html">Blog</a></li>
+            <li><a class="qlinks" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Blog Content -->
+    <div class="blog_content">
+        <!-- Career Guidance Section -->
+        <div class="blog_section" id="career">
+            <h1 class="blog_heading">Career Guidance Workshop</h1>
+            <button class="toggle_button" onclick="toggleReport('careerReport')">
+                Namakkal Kongu Matriculation Higher Secondary School
+            </button>
+            <div id="careerReport" class="report_content">
+                <p class="blog_para">
+                    We are thrilled to announce our workshop, in collaboration with Namakkal Kongu Matriculation Higher Secondary School, specifically designed for 12th standard students. This exciting event is scheduled to take place on October 14th, 2024.
+                </p>
+                <p class="blog_para">
+                    Our team, Infront Of Us, is eager to share our knowledge and expertise to guide these young minds in shaping their careers. This interactive session aims to provide valuable insights and guidance, empowering them to make informed decisions about their future.
+                </p>
+                <p class="blog_para">
+                    We extend our heartfelt gratitude to the management and principal of Namakkal Kongu Matriculation Higher Secondary School for this wonderful opportunity. Your support and trust in our team are greatly appreciated.
+                </p>
+                <p class="blog_para">
+                    We look forward to making a positive impact on the lives of these young individuals.
+                </p>
+
+                <!-- Career Guidance Images -->
+                <div class="image_gallery">
+                    <img src="CG1.jpg" alt="Career Guidance Image 1">
+                    <img src="CG2.jpg" alt="Career Guidance Image 2">
+                    <img src="CG3.jpg" alt="Career Guidance Image 3">
+                    <img src="CG4.jpg" alt="Career Guidance Image 4">
+                </div>
+            </div>
+        </div>
+
+        <!-- Science Expo Section -->
+        <div class="blog_section" id="expo">
+            <h1 class="blog_heading" >Science Expo Report</h1>
+            <button class="toggle_button" onclick="toggleReport('expoReport')">
+                Namakkal Kongu Matriculation Higher Secondary School
+            </button>
+            <div id="expoReport" class="report_content">
+                <p class="blog_para">
+                    Hello followers! This is from the Founder & CEO of Infront of Us.
+                </p>
+                <p class="blog_para">
+                    I am thrilled to share that I have been invited as a judge for the science expo held on October 15, 2024, at Namakkal Kongu Matriculation Higher Secondary School. As a student, I spent 12 incredible years at this institution, participating in numerous expos and events at various colleges, schools, and institutions. These experiences not only broadened my knowledge but also helped me develop essential skills like communication, leadership, and time management.
+                </p>
+                <p class="blog_para">
+                    Today, I am overwhelmed with gratitude as I return to my roots, not as a participant, but as a judge. This is truly a dream come true moment.
+                </p>
+                <p class="blog_para">
+                    I extend my heartfelt gratitude to the management and Principal Mrs. Geetha Ma'am for bestowing this honor upon me. I believe this platform will enable me to give back to my community and inspire the next generation of innovators.
+                </p>
+
+                <!-- Science Expo Images -->
+                <div class="image_gallery">
+                    <img src="expo1.jpg" alt="Science Expo Image 1">
+                    <img src="expo2.jpg" alt="Science Expo Image 2">
+                    <img src="expo3.jpg" alt="Science Expo Image 3">
+                    <img src="expo4.jpg" alt="Science Expo Image 4">
+                    <img src="expo5.jpg" alt="Science Expo Image 5">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo and Contact Info -->
+            <div class="footer-section">
+                <img class="footer-logo" src="mainlogo2.png" alt="Infrontofus Logo">
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</li>
+                    <li><i class="fas fa-phone"></i> +91 7708658035</li>
+                    <li><i class="fas fa-envelope"></i> infrontofus143@gmail.com</li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="footer-section">
+                <h3 class="footer-heading">Follow Us</h3>
+                <div class="uiverse-card">
+                    <div class="social_card">
+                        <div class="social_background"></div>
+                        <div class="social_logo">
+                            <p class="s">social</p>
+                        </div>
+                        <div class="social_box social_box1">
+                            <a href="https://www.instagram.com/_infront_of_us_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+                                <span class="social_icon">
+                                    <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" class="svg">
+                                        <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="social_box social_box2">
+                            <a href="#" target="_blank" aria-label="Twitter">
+                                <span class="social_icon">
+                                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="svg">
+                                        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="social_box social_box3">
+                            <a href="https://youtube.com/channel/UCE1tN8OMn5rxFYnO62WUf1A" target="_blank" aria-label="YouTube">
+                                <span class="social_icon">
+                                    <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" class="svg">
+                                        <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Notice -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Infrontofus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Toggle Report -->
+    <script>
+        function toggleMenu() {
+            let navLinks = document.getElementById("nav-links");
+            let hamburger = document.querySelector(".hamburger");
+
+            // Toggle menu visibility
+            navLinks.classList.toggle("show");
+
+            // Toggle hamburger/cross icon
+            hamburger.classList.toggle("active");
+        }
+
+        function toggleReport(reportId) {
+            const reportContent = document.getElementById(reportId);
+            if (reportContent.style.display === "none" || reportContent.style.display === "") {
+                reportContent.style.display = "block";
+            } else {
+                reportContent.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

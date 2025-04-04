@@ -6,9 +6,9 @@
 }
 
 body {
-    background-color: black;
+    background-color: white; /* Changed to white */
     font-family: "EB Garamond", serif;
-    color: white;
+    color: black; /* Text color changed to black */
 }
 
 /* Navbar */
@@ -26,19 +26,21 @@ body {
     padding: 0 20px;
 }
 
-/* Logo */
 .nav_img {
     height: 100px;
     padding: 5px;
 }
 
-/* Navigation Heading */
 .nav_heading {
     color: white;
-    font-size: 34px;
+    font-size: 28px;
     font-weight: bold;
     margin-left: 10px;
-    font-family: "EB Garamond", serif;
+    font-family: "Creepster", serif;
+}
+
+.a {
+    font-size: 35px;
 }
 
 /* Navigation Links */
@@ -56,7 +58,7 @@ body {
     color: white;
     padding: 15px 30px;
     border-radius: 50px;
-    background: linear-gradient(to right, #43cea2, #185a9d);
+    background-color: #000000;
     text-decoration: none;
     font-size: 20px;
     transition: 0.3s;
@@ -64,7 +66,7 @@ body {
 }
 
 .quicklinks li a:hover {
-    background: linear-gradient(to right, #185a9d, #43cea2);
+    background-color: #333;
 }
 
 /* Hamburger Menu (Mobile) */
@@ -105,6 +107,7 @@ body {
     opacity: 1; /* Show close icon */
 }
 
+
 /* About Us Content */
 .about_content {
     padding: 150px 20px 50px;
@@ -113,19 +116,16 @@ body {
 }
 
 .about_heading {
-    background: linear-gradient(to right, #43cea2, #185a9d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 60px;
+    margin-top: 20px;
+    color: black;
+    font-size: 25px;
     font-family: "EB Garamond", serif;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .about_subheading {
-    background: linear-gradient(to right, #43cea2, #185a9d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: black;
     font-size: 40px;
     font-family: "EB Garamond", serif;
     margin: 30px 0 15px;
@@ -136,6 +136,7 @@ body {
     line-height: 1.6;
     margin-bottom: 20px;
     font-family: "EB Garamond", serif;
+    color: black; /* Paragraph text color changed to black */
 }
 
 .about_list {
@@ -149,19 +150,17 @@ body {
     line-height: 1.6;
     margin-bottom: 10px;
     font-family: "EB Garamond", serif;
+    color: black; /* List text color changed to black */
 }
 
 .about_list strong {
-    color: #43cea2;
+    color: rgb(190, 0, 168); /* Strong text remains gradient */
 }
 
-/* Gradient Border for Images */
+/* Image Shadow Effect (Like Home Page) */
 .gradient-border {
     position: relative;
     display: inline-block;
-    padding: 5px;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #43cea2, #185a9d);
     margin: 20px 0;
 }
 
@@ -169,14 +168,18 @@ body {
     width: 100%;
     max-width: 500px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 0px 10px 0px 10px;
     display: block;
+    filter: brightness(0.9);
+    box-shadow:
+        -50px -50px 0 -40px black, /* Top-left shadow */
+        50px 50px 0 -40px black; /* Bottom-right shadow */
 }
 
 /* Footer */
 .footer {
-    background-color: #1a1a1a;
-    color: white;
+    background-color: black; /* Footer remains black */
+    color: white; /* Footer text remains white */
     padding: 40px 20px;
     margin-top: 50px;
 }
@@ -188,66 +191,216 @@ body {
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: left; /* Ensure content is aligned to the left */
 }
 
 .footer-section {
     flex: 1;
     min-width: 200px;
     margin-bottom: 20px;
+    text-align: left; /* Ensure content is aligned to the left */
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px gray;
+    padding: 5px;
 }
 
 .footer-heading {
     font-size: 20px;
     margin-bottom: 15px;
-    background: linear-gradient(to top, #43cea2, #185a9d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
+    text-shadow: 3px 3px 10px white;
     font-family: "EB Garamond", serif;
+    text-align: left; /* Ensure headings are aligned to the left */
 }
 
 .footer-links,
-.social-links,
 .contact-info {
     list-style: none;
     padding: 0;
+    text-align: left; /* Ensure lists are aligned to the left */
 }
 
 .footer-links li,
-.social-links li,
 .contact-info li {
     margin-bottom: 10px;
+    text-align: left; /* Ensure list items are aligned to the left */
 }
 
 .footer-links a,
-.social-links a,
 .contact-info a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
+    text-align: left; /* Ensure links are aligned to the left */
 }
 
 .footer-links a:hover,
-.social-links a:hover {
-    background: linear-gradient(to right, #185a9d, #43cea2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.contact-info a:hover {
+    color: rgb(190, 0, 168);
+    text-shadow: 1px 1px 5px white;
 }
 
-.social-links img {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-right: 10px;
-    transition: transform 0.3s ease, filter 0.3s ease;
+/* Social Links (Like Home Page) */
+.uiverse-card {
+    display: flex;
+    justify-content: flex-start; /* Align social links to the left */
+    align-items: flex-start; /* Align items to the top */
+    width: 100%; /* Ensure it takes full width */
 }
 
-.social-links a:hover img {
-    transform: scale(1.2);
-    filter: brightness(1.2) saturate(1.5);
+.social_card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: lightgrey;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 1s ease-in-out;
+    margin: 0; /* Remove any default margin */
 }
 
+.social_background {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 100% 107%, rgb(129, 129, 129) 0%, black 30%, rgb(46, 46, 46) 60%, black 100%);
+}
+
+.social_logo {
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    transition: all 0.6s ease-in-out;
+}
+
+.social_logo .logo-svg {
+    fill: white;
+    width: 30px;
+    height: 30px;
+}
+
+.social_icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.social_icon .svg {
+    fill: rgba(255, 255, 255, 0.797);
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.social_box {
+    position: absolute;
+    padding: 10px;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.389);
+    border-top: 2px solid rgb(255, 255, 255);
+    border-right: 1px solid white;
+    border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
+    box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
+    transform-origin: bottom left;
+    transition: all 1s ease-in-out;
+}
+
+.social_box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.social_box:hover .svg {
+    fill: white;
+}
+
+.social_box1 {
+    width: 70%;
+    height: 70%;
+    bottom: -70%;
+    left: -70%;
+}
+
+.social_box1::before {
+    background: radial-gradient(circle at 30% 107%, black 0%, rgb(83, 83, 83) 5%, rgb(90, 90, 90) 60%, black 90%);
+}
+
+.social_box1:hover::before {
+    opacity: 1;
+}
+
+.social_box1:hover .social_icon .svg {
+    filter: drop-shadow(0 0 5px white);
+}
+
+.social_box2 {
+    width: 50%;
+    height: 50%;
+    bottom: -50%;
+    left: -50%;
+    transition-delay: 0.2s;
+}
+
+.social_box2::before {
+    background: radial-gradient(circle at 30% 107%, rgb(66, 66, 66) 0%, black 90%);
+}
+
+.social_box2:hover::before {
+    opacity: 1;
+}
+
+.social_box2:hover .social_icon .svg {
+    filter: drop-shadow(0 0 5px white);
+}
+
+.social_box3 {
+    width: 30%;
+    height: 30%;
+    bottom: -30%;
+    left: -30%;
+    transition-delay: 0.4s;
+}
+
+.social_box3::before {
+    background: radial-gradient(circle at 30% 107%, #3f3f3f 0%, black 90%);
+}
+
+.social_box3:hover::before {
+    opacity: 1;
+}
+
+.social_box3:hover .social_icon .svg {
+    filter: drop-shadow(0 0 5px white);
+}
+
+.social_card:hover {
+    transform: scale(1.1);
+}
+
+.social_card:hover .social_box {
+    bottom: -1px;
+    left: -1px;
+}
+
+.social_card:hover .social_logo {
+    transform: translate(0, 0);
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Footer Bottom */
 .footer-bottom {
-    text-align: center;
+    text-align: center; /* Center the copyright notice */
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid #333;
@@ -276,9 +429,9 @@ body {
         position: absolute;
         top: 80px;
         right: 0;
-        width: fit-content;
-        padding: 60px 20px;
-        row-gap: 50px;
+        width: 100%;
+        padding: 20px;
+        row-gap: 20px;
     }
 
     .quicklinks.show {
@@ -286,14 +439,15 @@ body {
     }
 
     .quicklinks li {
-        padding: 1px 0;
+        padding: 10px 0;
         width: 100%;
     }
 
     .quicklinks li a {
         display: block;
-        background: linear-gradient(to right, #000000, #000000);
+        text-align: center;
     }
+
 
     .about_content {
         padding-top: 80px;
@@ -317,5 +471,46 @@ body {
 
     .gradient-border img {
         max-width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start; /* Align content to the left */
+        text-align: left; /* Ensure text is aligned to the left */
+    }
+
+    .footer-section {
+        margin-bottom: 30px;
+        text-align: left; /* Ensure content is aligned to the left */
+    }
+
+    .footer-logo {
+        margin: 0 auto 20px; /* Center the logo */
+    }
+
+    .contact-info li {
+        justify-content: flex-start; /* Align contact info to the left */
+    }
+
+    .footer-links,
+    .social-links {
+        display: flex;
+        justify-content: flex-start; /* Align links to the left */
+        gap: 15px;
+    }
+
+    .footer-links li,
+    .social-links li {
+        margin-bottom: 0;
+    }
+
+    .uiverse-card {
+        margin-top: 20px;
+        justify-content: flex-start; /* Align social links to the left */
+    }
+
+    .social_card {
+        width: 120px;
+        height: 120px;
     }
 }

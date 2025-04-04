@@ -1,4 +1,6 @@
-/* Reset Default Styles */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +8,9 @@
 }
 
 body {
-    background-color: black;
-    font-family: Arial, sans-serif;
-    color: white;
+    background-color: #e7e7e7;
+    font-family: "EB Garamond", serif;
+    color: black;
 }
 
 /* Navbar */
@@ -26,10 +28,21 @@ body {
     padding: 0 20px;
 }
 
-/* Logo */
 .nav_img {
     height: 100px;
     padding: 5px;
+}
+
+.nav_heading {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: "Creepster", serif;
+}
+
+.a {
+    font-size: 35px;
 }
 
 /* Navigation Links */
@@ -47,15 +60,15 @@ body {
     color: white;
     padding: 15px 30px;
     border-radius: 50px;
-    background: linear-gradient(to right, #43cea2, #185a9d);
+    background-color: #000000;
     text-decoration: none;
     font-size: 20px;
     transition: 0.3s;
-    font-family: "Moon Dance", serif;
+    font-family: "EB Garamond", serif;
 }
 
 .quicklinks li a:hover {
-    background: linear-gradient(to right, #185a9d, #43cea2);
+    background-color: #333;
 }
 
 /* Hamburger Menu (Mobile) */
@@ -67,140 +80,132 @@ body {
     border: none;
     padding: 10px;
     color: white;
+    position: relative;
 }
 
-/* Contact Us Content */
-.contact_content {
-    padding: 100px 20px 50px;
-    max-width: 1200px;
-    margin: 0 auto;
+.hamburger-icon,
+.close-icon {
+    transition: opacity 0.3s ease;
 }
 
-.contact_heading {
-    background: linear-gradient(to right, #43cea2, #185a9d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 60px;
-    font-family: "Creepster", serif;
-    margin-bottom: 20px;
+.close-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially hidden */
+}
+
+.hamburger-icon {
+    opacity: 1; /* Initially visible */
+}
+
+/* When menu is open */
+.hamburger.active .hamburger-icon {
+    opacity: 0; /* Hide hamburger icon */
+}
+
+.hamburger.active .close-icon {
+    opacity: 1; /* Show close icon */
+}
+
+/* Contact Page Content */
+.contact-content {
+    width: 90%;
+    max-width: 800px;
     text-align: center;
+    margin-top: 150px; /* Push content below fixed navbar */
+    padding: 20px;
 }
 
-.contact_para {
+/* Contact Heading */
+.contact-heading {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.contact-subheading {
     font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 40px;
-    text-align: center;
-    font-family: "Moon Dance", serif;
+    margin-bottom: 30px;
 }
 
-.contact_container {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
+/* Contact Form */
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
-.contact_form {
-    flex: 1;
-    min-width: 300px;
-}
-
-.form_group {
+.form-group {
     margin-bottom: 20px;
+    text-align: left;
 }
 
-.form_group label {
+.form-group label {
     display: block;
-    font-size: 18px;
-    margin-bottom: 5px;
-    font-family: "Moon Dance", serif;
+    font-weight: bold;
 }
 
-.form_group input,
-.form_group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 2px solid #43cea2;
-    border-radius: 10px;
-    background-color: transparent;
-    color: white;
     font-size: 16px;
-    font-family: "Moon Dance", serif;
-}
-
-.form_group textarea {
-    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .submit_btn {
-    background: linear-gradient(to right, #43cea2, #185a9d);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 50px;
+    width: 100%;
+    padding: 12px;
     font-size: 18px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
-    font-family: "Moon Dance", serif;
+    transition: background 0.3s;
 }
 
 .submit_btn:hover {
-    background: linear-gradient(to right, #185a9d, #43cea2);
+    background-color: #333;
 }
 
-.contact_details {
-    flex: 1;
-    min-width: 300px;
-    background-color: rgba(0, 0, 0, 0.5);
+/* Contact Info */
+.contact_info {
+    width: 100%;
+    max-width: 600px;
+    background: white;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.details_heading {
-    background: linear-gradient(to right, #43cea2, #185a9d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 40px;
-    font-family: "Moon Dance", serif;
-    margin-bottom: 20px;
-}
-
-.details_list {
+.info-list {
     list-style: none;
     padding: 0;
 }
 
-.details_list li {
+.info-list li {
     font-size: 18px;
-    margin-bottom: 15px;
-    font-family: "Moon Dance", serif;
+    margin-bottom: 10px;
 }
 
-.details_list i {
-    margin-right: 10px;
-    color: #43cea2;
-}
-
-.social_icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social_icons a {
-    color: #43cea2;
-    font-size: 24px;
-    transition: color 0.3s ease;
-}
-
-.social_icons a:hover {
-    color: #185a9d;
+.contact-map {
+    width: 100%;
+    height: 400px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
 .footer {
-    background-color: #1a1a1a;
+    background-color: black;
     color: white;
     padding: 40px 20px;
     margin-top: 50px;
@@ -213,41 +218,45 @@ body {
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: left;
 }
 
 .footer-section {
     flex: 1;
     min-width: 200px;
     margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    text-align: left;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px gray;
+    padding: 5px;
 }
 
 .footer-heading {
     font-size: 20px;
     margin-bottom: 15px;
-    background: linear-gradient(to top, #43cea2, #185a9d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Moon Dance", serif;
+    color: white;
+    text-shadow: 3px 3px 10px white;
+    font-family: "EB Garamond", serif;
 }
 
 .footer-links,
-.social-links,
 .contact-info {
     list-style: none;
     padding: 0;
 }
 
 .footer-links li,
-.social-links li,
 .contact-info li {
     margin-bottom: 10px;
 }
 
 .footer-links a,
-.social-links a,
 .contact-info a {
     color: white;
     text-decoration: none;
@@ -255,18 +264,164 @@ body {
 }
 
 .footer-links a:hover,
-.social-links a:hover {
-    background: linear-gradient(to right, #185a9d, #43cea2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.contact-info a:hover {
+    color: rgb(190, 0, 168);
+    text-shadow: 1px 1px 5px white;
 }
 
-.social-links i,
-.contact-info i {
-    margin-right: 10px;
-    color: #43cea2;
+/* Social Links */
+.uiverse-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
 }
 
+.social_card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: lightgrey;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 1s ease-in-out;
+    margin: 0;
+}
+
+.social_background {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 100% 107%, rgb(129, 129, 129) 0%, black 30%, rgb(46, 46, 46) 60%, black 100%);
+}
+
+.social_logo {
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    transition: all 0.6s ease-in-out;
+}
+
+.social_logo .logo-svg {
+    fill: white;
+    width: 30px;
+    height: 30px;
+}
+
+.social_icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.social_icon .svg {
+    fill: rgba(255, 255, 255, 0.797);
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.social_box {
+    position: absolute;
+    padding: 10px;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.389);
+    border-top: 2px solid rgb(255, 255, 255);
+    border-right: 1px solid white;
+    border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
+    box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
+    transform-origin: bottom left;
+    transition: all 1s ease-in-out;
+}
+
+.social_box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.social_box:hover .svg {
+    fill: white;
+}
+
+.social_box1 {
+    width: 70%;
+    height: 70%;
+    bottom: -70%;
+    left: -70%;
+}
+
+.social_box1::before {
+    background: radial-gradient(circle at 30% 107%, black 0%, rgb(83, 83, 83) 5%, rgb(90, 90, 90) 60%, black 90%);
+}
+
+.social_box1:hover::before {
+    opacity: 1;
+}
+
+.social_box1:hover .social_icon .svg {
+    filter: drop-shadow(0 0 5px white);
+}
+
+.social_box2 {
+    width: 50%;
+    height: 50%;
+    bottom: -50%;
+    left: -50%;
+    transition-delay: 0.2s;
+}
+
+.social_box2::before {
+    background: radial-gradient(circle at 30% 107%, rgb(66, 66, 66) 0%, black 90%);
+}
+
+.social_box2:hover::before {
+    opacity: 1;
+}
+
+.social_box2:hover .social_icon .svg {
+    filter: drop-shadow(0 0 5px white);
+}
+
+.social_box3 {
+    width: 30%;
+    height: 30%;
+    bottom: -30%;
+    left: -30%;
+    transition-delay: 0.4s;
+}
+
+.social_box3::before {
+    background: radial-gradient(circle at 30% 107%, #3f3f3f 0%, black 90%);
+}
+
+.social_box3:hover::before {
+    opacity: 1;
+}
+
+.social_box3:hover .social_icon .svg {
+    filter: drop-shadow(0 0 5px white);
+}
+
+.social_card:hover {
+    transform: scale(1.1);
+}
+
+.social_card:hover .social_box {
+    bottom: -1px;
+    left: -1px;
+}
+
+.social_card:hover .social_logo {
+    transform: translate(0, 0);
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Footer Bottom */
 .footer-bottom {
     text-align: center;
     margin-top: 20px;
@@ -274,19 +429,7 @@ body {
     border-top: 1px solid #333;
     font-size: 14px;
 }
-/* Social Media Links */
-.social-links img {
-    width: 24px; /* Adjust size as needed */
-    height: 24px; /* Adjust size as needed */
-    vertical-align: middle;
-    margin-right: 10px;
-}
 
-
-
-.social-links a:hover {
-    color: #43cea2; /* Change hover color as needed */
-}
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .hamburger {
@@ -297,9 +440,11 @@ body {
         height: 80px;
         padding: 10px;
     }
+
     .nav_img {
         height: 80px;
     }
+
     .quicklinks {
         display: none;
         flex-direction: column;
@@ -307,9 +452,9 @@ body {
         position: absolute;
         top: 80px;
         right: 0;
-        width: fit-content;
-        padding: 60px 20px;
-        row-gap: 50px;
+        width: 100%;
+        padding: 20px;
+        row-gap: 20px;
     }
 
     .quicklinks.show {
@@ -317,28 +462,53 @@ body {
     }
 
     .quicklinks li {
-        padding: 15px 0;
+        padding: 10px 0;
         width: 100%;
     }
 
-    .contact_content {
-        padding-top: 80px;
+    .quicklinks li a {
+        display: block;
+        text-align: center;
     }
 
-    .contact_heading {
-        font-size: 40px;
-    }
-
-    .contact_para {
-        font-size: 18px;
-    }
-
-    .contact_container {
+    .footer-container {
         flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
     }
 
-    .contact_form,
-    .contact_details {
-        width: 100%;
+    .footer-section {
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    .footer-logo {
+        margin: 0 auto 20px;
+    }
+
+    .contact-info li {
+        justify-content: flex-start;
+    }
+
+    .footer-links,
+    .social-links {
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .footer-links li,
+    .social-links li {
+        margin-bottom: 0;
+    }
+
+    .uiverse-card {
+        margin-top: 20px;
+        justify-content: flex-start;
+    }
+
+    .social_card {
+        width: 120px;
+        height: 120px;
     }
 }
