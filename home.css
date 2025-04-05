@@ -255,6 +255,181 @@ body {
     transform: translateX(4px);
 }
 
+/* Achievements Section */
+.achievements-section {
+    background-color: #f8f8f8;
+    padding: 60px 20px;
+    margin: 40px 0;
+}
+
+.achievements-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.achievements-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.achievements-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.achievements-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.benefits-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.benefits-list li {
+    margin-bottom: 15px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.benefits-list i {
+    color: #4CAF50;
+    font-size: 22px;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #333;
+}
+
+.achievements-awards {
+    flex: 1;
+    min-width: 300px;
+}
+
+.achievements-awards h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.award-card {
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+}
+
+.award-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: gray;
+}
+
+.award-card h4 {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: white;
+    color: black;
+    padding: 60px 20px;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials-container h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: black;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: white;
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.testimonial-text {
+    flex: 1;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-initial {
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.author-info h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
 /* Footer */
 .footer {
     background-color: black; /* Footer remains black */
@@ -553,6 +728,18 @@ body {
         margin-top: 20px; /* Positive margin instead of negative */
         width: 90%;
         max-width: 400px;
+    }
+
+    .achievements-container, .testimonials-grid {
+        flex-direction: column;
+    }
+    
+    .achievements-text, .achievements-awards {
+        width: 100%;
+    }
+    
+    .testimonial-card {
+        padding: 20px;
     }
 
     .footer-container {
