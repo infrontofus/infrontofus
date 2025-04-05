@@ -551,6 +551,10 @@ body {
         margin-top: 170px;
     }
 
+    #qc{
+        margin-top: -200px; 
+    }
+
     .quicklink_card {
         margin-top: -90px;
         width: 90%;
