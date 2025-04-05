@@ -138,7 +138,7 @@ body {
 .body_img::before {
     content: "";
     position: absolute;
-    top: -150px;
+    top: -15px;
     left: -15px;
     right: -15px;
     bottom: -15px;
@@ -528,7 +528,7 @@ body {
     .body_content {
         flex-direction: column;
         text-align: center;
-        margin-top: 80px;
+        margin-top: 50px;
     }
 
     .body_img {
