@@ -39,6 +39,29 @@
         <h1 class="contact-heading">Contact Us</h1>
         <p class="contact-subheading">We'd love to hear from you! Reach out to us on WhatsApp for any inquiries or feedback.</p>
 
+
+        <!-- Contact Form -->
+        <center>
+            <div class="contact-form">
+                <form id="contactForm" name="contact" method="POST" netlify data-netlify="true" action="/?form-submitted=true">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit_btn">Send Message</button>
+                </form>
+            </div>
+        </center>
+
+
         <!-- WhatsApp Button -->
         <div class="whatsapp-container">
             <a href="https://wa.me/917708658035" class="whatsapp-btn" target="_blank">
@@ -157,6 +180,40 @@
             // Toggle hamburger/cross icon
             hamburger.classList.toggle("active");
         }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for success in URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const formSubmitted = urlParams.get('form-submitted');
+            
+            if (formSubmitted === 'true') {
+                // Show success popup
+                alert('Thank you! Your message has been sent successfully.');
+                // Optional: Clear the URL without reloading
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                // Show success popup
+                alert('Thank you! Your message has been sent successfully.');
+                form.reset(); // Reset the form
+            })
+            .catch(error => {
+                alert('There was an error sending your message. Please try again.');
+                console.error('Error:', error);
+            });
+        });
+
     </script>
 </body>
 </html>
