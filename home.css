@@ -121,8 +121,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    padding-top: 100px; /* To avoid overlap with fixed navbar */
+    min-height: 100vh; /* Changed from height to min-height */
+    padding: 100px 20px 40px; /* Added bottom padding */
 }
 
 .body_img {
@@ -173,7 +173,8 @@ body {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin: 20px auto;
+    margin: 40px auto; /* Increased top margin */
+    padding: 20px 0; /* Added padding */
     max-width: 1200px;
 }
 
@@ -544,19 +545,12 @@ body {
     }
 
     .body_quicklinks {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        margin: 20px 0;
-        margin-top: 170px;
-    }
-
-    #qc{
-        margin-top: -200px; 
+        margin: 40px 0; /* Remove negative margin and use positive values */
+        padding: 20px;
     }
 
     .quicklink_card {
-        margin-top: -90px;
+        margin-top: 20px; /* Positive margin instead of negative */
         width: 90%;
         max-width: 400px;
     }
