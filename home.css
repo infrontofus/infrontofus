@@ -534,7 +534,7 @@ body {
     .body_img {
         width: 100%;
         max-width: 800px;
-        margin-top: 0px;
+        margin-top: -30px;
     }
 
     .body_text {
@@ -552,6 +552,7 @@ body {
     }
 
     .quicklink_card {
+        margin-top: -90px;
         width: 90%;
         max-width: 400px;
     }
