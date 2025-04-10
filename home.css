@@ -266,14 +266,15 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 40px;
     align-items: center;
 }
 
 .achievements-text {
-    flex: 1;
-    min-width: 300px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .achievements-text h2 {
@@ -294,19 +295,6 @@ body {
     margin-bottom: 30px;
 }
 
-.benefits-list li {
-    margin-bottom: 15px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.benefits-list i {
-    color: #4CAF50;
-    font-size: 22px;
-}
-
 .explore-btn {
     display: inline-block;
     padding: 12px 30px;
@@ -323,46 +311,50 @@ body {
 }
 
 .achievements-awards {
-    flex: 1;
-    min-width: 300px;
+    width: 100%;
+    text-align: center;
 }
 
 .achievements-awards h3 {
     font-size: 28px;
     margin-bottom: 30px;
-    text-align: center;
     color: #333;
 }
 
 .awards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .award-card {
     background-color: white;
-    padding: 25px 20px;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .award-card:hover {
     transform: translateY(-5px);
 }
 
-.award-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-    color: gray;
+.achive-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
-.award-card h4 {
-    font-size: 18px;
-    color: #333;
-}
+
+
 
 /* Testimonials Section */
 .testimonials-section {
@@ -386,7 +378,8 @@ body {
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    row-gap: 30px;
+    margin-bottom: 20px;
 }
 
 .testimonial-card {
@@ -430,29 +423,30 @@ body {
     font-size: 18px;
 }
 
-/* Footer */
+/* Footer Styles */
 .footer {
-    background-color: black; /* Footer remains black */
-    color: white; /* Footer text remains white */
-    padding: 40px 20px;
+    background-color: black;
+    color: white;
+    padding: 60px 20px 30px;
     margin-top: 50px;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: left; /* Ensure content is aligned to the left */
 }
 
 .footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 20px;
-    text-align: left; /* Ensure content is aligned to the left */
+    margin-bottom: 30px;
+}
+
+.footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .footer-logo {
@@ -460,43 +454,96 @@ body {
     height: auto;
     margin-bottom: 20px;
     border-radius: 5px;
-    padding: 5px;
 }
 
 .footer-heading {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 22px;
+    margin-bottom: 20px;
     color: white;
-    text-shadow: 3px 3px 10px white;
     font-family: "EB Garamond", serif;
-    text-align: left; /* Ensure headings are aligned to the left */
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block; /* Added for proper underline positioning */
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #ffffff, transparent);
+}
+
+/* Fix for Follow Us underline positioning */
+.footer-section:last-child .footer-heading {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-section:last-child .footer-heading::after {
+    bottom: 0;
 }
 
 .footer-links,
-.contact-info {
+.contact-info,
+.program-links {
     list-style: none;
     padding: 0;
-    text-align: left; /* Ensure lists are aligned to the left */
+    margin: 0;
 }
 
 .footer-links li,
-.contact-info li {
-    margin-bottom: 10px;
-    text-align: left; /* Ensure list items are aligned to the left */
+.contact-info li,
+.program-links li {
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.footer-links li:hover,
+.program-links li:hover {
+    transform: translateX(5px);
 }
 
 .footer-links a,
-.contact-info a {
+.contact-info a,
+.program-links a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
-    text-align: left; /* Ensure links are aligned to the left */
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .footer-links a:hover,
-.contact-info a:hover {
-    color: rgb(190, 0, 168);
-    text-shadow: 1px 1px 5px white;
+.contact-info a:hover,
+.program-links a:hover {
+    color: #ff6b6b;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.contact-info i {
+    margin-top: 3px;
+    font-size: 18px;
+    color: #ff6b6b;
+}
+
+.program-desc {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 28px;
+}
+
+.click{
+    font-size: 10px;
 }
 
 /* Social Links (Like Home Page) */
@@ -660,6 +707,55 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-section {
+        margin-bottom: 20px;
+    }
+    
+    .footer-heading {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .footer-logo {
+        width: 180px;
+    }
+    
+    .uiverse-card {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 15px;
+    }
+    
+    .footer-heading {
+        font-size: 18px;
+    }
+    
+    .contact-info li {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
     .hamburger {
         display: block;
@@ -729,56 +825,110 @@ body {
         max-width: 400px;
     }
 
-    .achievements-container, .testimonials-grid {
-        flex-direction: column;
+    .achievements-text h2 {
+        font-size: 24px;
     }
-    
-    .achievements-text, .achievements-awards {
-        width: 100%;
+
+    .achievements-text p {
+        font-size: 15px;
     }
-    
+
+    .achievements-awards h3 {
+        font-size: 22px;
+    }
     .testimonial-card {
         padding: 20px;
     }
 
+    .footer {
+        padding: 40px 20px 20px;
+    }
+    
     .footer-container {
-        flex-direction: column;
-        align-items: flex-start; /* Align content to the left */
-        text-align: left; /* Ensure text is aligned to the left */
-    }
-
-    .footer-section {
-        margin-bottom: 30px;
-        text-align: left; /* Ensure content is aligned to the left */
-    }
-
-    .footer-logo {
-        margin: 0 auto 20px; /* Center the logo */
-    }
-
-    .contact-info li {
-        justify-content: flex-start; /* Align contact info to the left */
-    }
-
-    .footer-links,
-    .social-links {
         display: flex;
-        justify-content: flex-start; /* Align links to the left */
-        gap: 15px;
+        flex-direction: column;
+        gap: 30px;
     }
-
+    
+    .footer-section {
+        margin-bottom: 20px;
+    }
+    
+    .footer-heading {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .footer-logo {
+        width: 180px;
+    }
+    
     .footer-links li,
-    .social-links li {
-        margin-bottom: 0;
+    .contact-info li,
+    .program-links li {
+        margin-bottom: 12px;
+    }
+    
+    .social-icons {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 15px;
+    }
+    
+    .footer-heading {
+        font-size: 18px;
+    }
+    
+    .footer-logo {
+        width: 160px;
+    }
+    
+    .contact-info li {
+        font-size: 14px;
+    }
+    
+    .program-desc {
+        font-size: 13px;
+    }
+    
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .achievements-section {
+        padding: 40px 15px;
     }
 
-    .uiverse-card {
-        margin-top: 20px;
-        justify-content: flex-start; /* Align social links to the left */
+    .achievements-text h2 {
+        font-size: 28px;
     }
 
-    .social_card {
-        width: 120px;
-        height: 120px;
+    .achievements-text p {
+        font-size: 16px;
+    }
+
+    .awards-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .award-card {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
