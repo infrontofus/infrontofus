@@ -713,50 +713,8 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .footer {
-        padding: 40px 20px 20px;
-    }
-    
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .footer-section {
-        margin-bottom: 20px;
-    }
-    
-    .footer-heading {
-        font-size: 20px;
-        margin-bottom: 15px;
-    }
-    
-    .footer-logo {
-        width: 180px;
-    }
-    
-    .uiverse-card {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer {
-        padding: 30px 15px;
-    }
-    
-    .footer-heading {
-        font-size: 18px;
-    }
-    
-    .contact-info li {
-        font-size: 14px;
-    }
-}
-
-/* Responsive Design */
 @media screen and (max-width: 768px) {
+    /* Navigation */
     .hamburger {
         display: block;
     }
@@ -796,6 +754,7 @@ body {
         text-align: center;
     }
 
+    /* Body Content */
     .body_content {
         flex-direction: column;
         text-align: center;
@@ -815,31 +774,49 @@ body {
     }
 
     .body_quicklinks {
-        margin: 40px 0; /* Remove negative margin and use positive values */
+        margin: 40px 0;
         padding: 20px;
     }
 
     .quicklink_card {
-        margin-top: 20px; /* Positive margin instead of negative */
+        margin-top: 20px;
         width: 90%;
         max-width: 400px;
     }
 
+    /* Achievements */
+    .achievements-section {
+        padding: 40px 15px;
+    }
+
     .achievements-text h2 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .achievements-text p {
-        font-size: 15px;
+        font-size: 16px;
+    }
+
+    .awards-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .award-card {
+        max-width: 100%;
+        padding: 15px;
     }
 
     .achievements-awards h3 {
         font-size: 22px;
     }
+
+    /* Testimonials */
     .testimonial-card {
         padding: 20px;
     }
 
+    /* Footer */
     .footer {
         padding: 40px 20px 20px;
     }
@@ -875,6 +852,7 @@ body {
 }
 
 @media (max-width: 480px) {
+    /* Footer */
     .footer {
         padding: 30px 15px;
     }
@@ -897,38 +875,5 @@ body {
     
     .footer-bottom {
         font-size: 12px;
-    }
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-    .achievements-section {
-        padding: 40px 15px;
-    }
-
-    .achievements-text h2 {
-        font-size: 28px;
-    }
-
-    .achievements-text p {
-        font-size: 16px;
-    }
-
-    .awards-grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .award-card {
-        max-width: 100%;
-        padding: 15px;
-    }
-}
-
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-    .footer-container {
-        grid-template-columns: repeat(2, 1fr);
     }
 }

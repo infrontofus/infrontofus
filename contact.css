@@ -524,6 +524,12 @@ body {
 }
 
 
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .hamburger {
@@ -565,88 +571,69 @@ body {
         text-align: center;
     }
 
-    .footer-container {
-        grid-template-columns: 1fr;
-        padding: 0 15px;
-    }
-    
-    .footer-section {
-        text-align: left; /* Keep left-aligned on mobile */
-    }
-    
-    .footer-heading::after {
-        left: 0; /* Keep underline aligned to left */
-        transform: none; /* Remove centering transform */
-    }
-    .contact-info li {
-        justify-content: flex-start; /* Align contact info to left */
-    }
-    .footer-links {
-        justify-content: flex-start; /* Align links to left */
-    }
-    .footer-links li {
-        margin-bottom: 0;
-    }
-    
-    .newsletter-form {
-        max-width: 300px;
-        margin: 0 auto 25px;
-    }
-    
-    .social-links {
-        justify-content: center;
-    }
-    
-    .footer-legal {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .achievement-icons {
-        grid-template-columns: 1fr;
-    }
-    
-    .program-desc {
-        margin-left: 25px;
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr;
-    }
-
-
+   /* Footer */
+   .footer {
+    padding: 40px 20px 20px;
 }
 
-@media (max-width: 768px) {
-    .footer {
-        padding: 40px 20px 20px;
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    width: 180px;
+}
+
+.footer-links li,
+.contact-info li,
+.program-links li {
+    margin-bottom: 12px;
+}
+
+.social-icons {
+    justify-content: flex-start;
+}
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        height: 60px;
+        padding: 5px;
     }
-    
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
+
+    .nav_img {
+        height: 60px;
     }
-    
-    .footer-section {
-        margin-bottom: 20px;
+
+    .contact-content {
+        width: 95%;
+        margin-top: 120px; /* Adjust for smaller screens */
     }
-    
-    .footer-heading {
-        font-size: 20px;
-        margin-bottom: 15px;
+
+    .contact-heading {
+        font-size: 30px;
     }
-    
-    .footer-logo {
-        width: 180px;
+
+    .contact-subheading {
+        font-size: 18px;
     }
-    
-    .uiverse-card {
-        justify-content: center;
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .submit_btn {
+        font-size: 16px;
     }
 }
